@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ProductManager.Core.Models.Product>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <partial name="_ProductOverview" model="item"/>
+    }
+</div>

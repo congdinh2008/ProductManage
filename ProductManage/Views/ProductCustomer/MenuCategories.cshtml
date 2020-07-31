@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ProductManager.Core.Models.Category>
+
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <a class="btn list-group-item list-group-item-action active" asp-area="" asp-controller="ProductCustomer" asp-action="ListProduct" asp-route-categoryId="@item.Id">
+            @item.Name
+        </a>
+    }
+
+</div>
